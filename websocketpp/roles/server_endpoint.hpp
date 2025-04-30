@@ -84,7 +84,7 @@ public:
 
 #ifdef _WEBSOCKETPP_MOVE_SEMANTICS_
     /// Move constructor
-    server(server && o) : endpoint<connection,config>(std::move(o)) {}
+    server(server && o) : endpoint<connection<config>,config>(std::move(o)) {}
 
 #ifdef _WEBSOCKETPP_DEFAULT_DELETE_FUNCTIONS_
     // no move assignment operator because of const member variables
